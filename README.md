@@ -1,1 +1,3 @@
-# finalprojectmpcs
+# League of Legends Worlds Analysis
+
+Currently, Riot Games is hosting its League of Legends World Championship. I want to use the Riot API to get information about teams and players’ champion pools and solo queue (playing the game by themselves outside of the game) answer some statistics about the current champions and win rates in these games compared to the games they are playing on stage (at the tournament) and creating a model to predict the win rate for a team vs another team based on these performances, along with their champion picks. I also hope to gather so broader statistics about the best champion pairings per team (ones with the highest win rates)
