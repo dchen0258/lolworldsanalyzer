@@ -12,6 +12,7 @@ def visualize_data(df):
     print("3: Scatter Plot")
     print("4: Histogram")
     print("5: Correlation Heatmap")
+    print("6: Sort Data")
 
     choice = input("Enter the number of the visualization type you want to create: ")
 
@@ -25,6 +26,8 @@ def visualize_data(df):
         histogram(df)
     elif choice == '5':
         correlation_heatmap(df)
+    elif choice == '6':
+        sort(df)
     else:
         print("Invalid choice. Please select a valid visualization type.")
 
@@ -81,6 +84,15 @@ def correlation_heatmap(df):
     sns.heatmap(correlation_matrix, annot=True, cmap="coolwarm", fmt=".2f")
     plt.title("Correlation Heatmap")
     plt.show()
+
+def sort(df):
+    column = input("Enter the column to sort by: ")
+    if column in df.columns:
+        asc = input("Type y for ascending or n for descending: ") == 'y'
+        df_sorted = df.sort_values(by=column,  ascending = asc)
+        print(df_sorted)
+    else:
+        print("Invalid column name.")
 
 def run_visualizer():
     filepath = input("Enter the path to the CSV file: ")
